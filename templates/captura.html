@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<form class="row g-3" method="POST" enctype="multipart/form-data" action="/upload">
+    <div class="col-2">
+        <label for="inputAddress2" class="form-label"><h3>DNI: </h3></label>
+    </div>
+    <div class="col-10">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name or DNI">
+    </div>
+    <div class="col-10">
+        <input type="file" class="form-file-input" id="customFile" name="file[]" multiple="">
+    </div>
+    <div class="col-2">
+        <input class="btn btn-primary" type="submit" value="Agregar Datos">
+    </div>
+</form>
+
+{% endblock %}

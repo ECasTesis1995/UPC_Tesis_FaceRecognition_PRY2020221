@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p class="text-end">
+HOLA <br/>{{ user_name }}
+</p>
+<h4>Elija una de las opciones, que desea realizar :</h4>
+<br/>
+
+<ul>
+    <li>
+        <a class="nav-link" href="{{ url_for('captura') }}">
+            <input type="submit" name = "aceptar" value = "1" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btn-check-2-outlined">Subir fotos de persona sospechosa</label><br>
+        </a>
+    </li>
+    <br/>
+    <li>
+        <a class="nav-link" href="{{ url_for('entrenar') }}">
+            <input type="submit" name = "aceptar" value = "2" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Entrenar el modelo con la nuevas imagenes subidas</label><br>
+        </a>
+    </li>
+    <br/>
+    <li>
+        <a class="nav-link" href="{{ url_for('reconocimiento') }}">
+            <input type="submit" name = "aceptar" value = "3" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-success" for="success-outlined">Ver la camara en tiempo real, trabajando</label>
+        </a>
+    </li>
+</ul>
+
+{% endblock %}

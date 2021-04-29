@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class = "container">
+    <h4>Desea entrenar el modelo con los nuevos archivos?</h4>    
+</div>
+<br/>
+<br/>
+<form action="/entrenando" method="POST" class="row g-3">
+    <div class="col-4">
+        <!-- <button type="submit" class="btn btn-primary"> Si </button> -->
+        <input type="submit" name = "aceptar" class="btn btn-secondary btn-lg" value="  NO  ">
+        &nbsp; &nbsp; &nbsp; 
+        <input type="submit" name = "aceptar" class="btn btn-primary btn-lg" value="  SI  ">
+        
+    </div>
+</form>
+
+{% endblock %}
+
